@@ -6,14 +6,14 @@ var thing string
 
 func main() {
 	thing = "x"
-	defer deferTest(makeThingY(thing))
+	defer deferTest(makeThingY(&thing))
 
 	fmt.Println("Good")
 	fmt.Println("Bye")
 }
 
-func makeThingY(thing string) string {
-	thing = "y"
+func makeThingY(thing *string) string {
+	*thing = "y"
 	return "thing called"
 }
 
