@@ -8,7 +8,7 @@ import (
 func main() {
 	defer deferTest(time.Now())
 	for i := 0; i < 10; i++ {
-		fmt.Println(i)
+		defer fmt.Println(i)
 	}
 
 	fmt.Println("Good")
