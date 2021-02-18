@@ -1,12 +1,12 @@
 package main
 
-import "fmt"
-
-var thing string
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
-	thing = "x"
-	defer deferTest(makeThingY(&thing))
+	defer deferTest(time.Now)
 
 	fmt.Println("Good")
 	fmt.Println("Bye")
@@ -17,7 +17,6 @@ func makeThingY(thing *string) string {
 	return "thing called"
 }
 
-func deferTest(thingReturn string) {
-	fmt.Println(thingReturn)
+func deferTest() {
 	fmt.Println("Hi")
 }
