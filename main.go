@@ -4,8 +4,12 @@ import "fmt"
 
 func main() {
 	sum(2, 2)
+	sum(1, 2, 3)
 }
 
-func sum(num1 int, num2 int) {
-	fmt.Println(num1 + num2)
+func sum(...nums int) {
+	total := 0
+	for _, num := range nums {
+		total+=num
+	}
 }
