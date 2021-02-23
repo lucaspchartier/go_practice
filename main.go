@@ -7,5 +7,7 @@ func main() {
 }
 
 func buy(item string, amount int, discount ...int) {
-
+	if len(discount > 0) {
+		amount -= discount[0]
+	}
 }
