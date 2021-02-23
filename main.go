@@ -13,5 +13,5 @@ func buy(item string, amount int, discount ...int) {
 		amount -= discount[0]
 	}
 
-	fmt.Printf("You bought %v for %d", amount)
+	fmt.Printf("You bought %v for %d\n", item, amount)
 }
