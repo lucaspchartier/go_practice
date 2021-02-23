@@ -1,17 +1,10 @@
 package main
 
-import "fmt"
-
 func main() {
-	buy(2, 2)
-	buy(1, 2, 3)
+	buy("milk", 3)
+	buy("cookies", 4, 1)
 }
 
-func buy(...nums int) {
-	total := 0
-	for _, num := range nums {
-		total+=num
-	}
+func buy(item string, amount int, discount ...int) {
 
-	fmt.Println(total)
 }
