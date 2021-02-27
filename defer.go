@@ -1,16 +1,21 @@
 package main
 
-// func main() {
-// 	defer deferTest(time.Now())
-// 	for i := 0; i < 10; i++ {
-// 		defer fmt.Println(i)
-// 	}
+import (
+	"fmt"
+	"time"
+)
 
-// 	fmt.Println("Good")
-// 	fmt.Println("Bye")
-// }
+func main() {
+	defer deferTest(time.Now())
+	for i := 0; i < 10; i++ {
+		defer fmt.Println(i)
+	}
 
-// func deferTest(start time.Time) {
-// 	elapsed := time.Since(start)
-// 	fmt.Println(elapsed)
-// }
+	fmt.Println("Good")
+	fmt.Println("Bye")
+}
+
+func deferTest(start time.Time) {
+	elapsed := time.Since(start)
+	fmt.Println(elapsed)
+}
